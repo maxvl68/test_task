@@ -49,13 +49,13 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-<!--        <dependency>
+        <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <version>RELEASE</version>
             <scope>test</scope>
         </dependency>
-        &lt;!&ndash; https://mvnrepository.com/artifact/junit/junit &ndash;&gt;-->
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
 
         <dependency>
             <groupId>javax.xml.bind</groupId>

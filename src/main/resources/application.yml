@@ -12,10 +12,18 @@ spring:
       enabled: true
       path: /h2
   datasource:
-    url: jdbc:h2:file:~/test_db
+    url: jdbc:h2:mem:/test_db
     username: root
     password: root
     driverClassName: org.h2.Driver
+
+  jpa:
+    show-sql: true
+    hibernate:
+      dll-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
 
 logging:
   level:
