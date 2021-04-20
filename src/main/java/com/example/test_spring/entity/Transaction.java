@@ -39,7 +39,8 @@ public class Transaction implements Serializable {
     @JacksonXmlProperty
     private String card;
 
-/*    @OneToOne
+    @OneToOne
+    @JoinColumn(name = "GROUP_ID")
     @JacksonXmlProperty
-    private Client client;*/
+    private Client client;
 }

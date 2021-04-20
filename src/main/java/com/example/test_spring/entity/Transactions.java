@@ -8,6 +8,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+
 @JacksonXmlRootElement
 public class Transactions implements Serializable {
 
@@ -21,7 +22,7 @@ public class Transactions implements Serializable {
         return transactions;
     }
 
-    public void setCities(List<Transaction> transactions) {
+    public void setTransactions(List<Transaction> transactions) {
         this.transactions = transactions;
     }
 }
