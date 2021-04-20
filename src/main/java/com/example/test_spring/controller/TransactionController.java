@@ -6,9 +6,8 @@ import com.example.test_spring.service.ITransactionService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.http.HttpStatus;
 
 @RestController
 public class TransactionController {
@@ -26,5 +25,11 @@ public class TransactionController {
     public Transaction findTransaction(@PathVariable Long cityId) {
 
         return transactionService.findById(cityId);
+    }
+
+    @ResponseStatus(HttpStatus.CREATED)
+    @PostMapping(value="/transactions", consumes=MediaType.APPLICATION_XML_VALUE)
+    public void saveXMLTransactions(@RequestBody Transactions transactions){
+        transactionService.save(transactions);
     }
 }

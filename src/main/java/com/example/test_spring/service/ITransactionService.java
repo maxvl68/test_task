@@ -8,4 +8,6 @@ public interface ITransactionService {
     Transactions findAll();
 
     Transaction findById(Long id);
+
+    void save(Transactions transactions);
 }

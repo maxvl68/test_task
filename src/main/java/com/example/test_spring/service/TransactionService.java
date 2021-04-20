@@ -30,4 +30,10 @@ public class TransactionService implements ITransactionService{
 
         return transactionRepository.findById(id).orElse(new Transaction());
     }
+
+    @Override
+    public void save(Transactions transactions) {
+
+        transactionRepository.saveAll(transactions.getTransaction());
+    }
 }
