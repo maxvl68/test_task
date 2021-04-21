@@ -1,8 +1,8 @@
-package com.example.test_spring.service;
+package com.example.testtask.service;
 
-import com.example.test_spring.entity.Transaction;
-import com.example.test_spring.entity.Transactions;
-import com.example.test_spring.repository.TransactionRepository;
+import com.example.testtask.entity.Transaction;
+import com.example.testtask.entity.Transactions;
+import com.example.testtask.repository.TransactionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

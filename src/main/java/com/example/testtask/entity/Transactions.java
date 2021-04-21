@@ -1,4 +1,4 @@
-package com.example.test_spring.entity;
+package com.example.testtask.entity;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;

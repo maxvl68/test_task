@@ -1,8 +1,8 @@
-package com.example.test_spring.controller;
+package com.example.testtask.controller;
 
-import com.example.test_spring.entity.Transaction;
-import com.example.test_spring.entity.Transactions;
-import com.example.test_spring.service.ITransactionService;
+import com.example.testtask.entity.Transaction;
+import com.example.testtask.entity.Transactions;
+import com.example.testtask.service.ITransactionService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;

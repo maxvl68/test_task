@@ -1,7 +1,7 @@
-package com.example.test_spring.controller;
+package com.example.testtask.controller;
 
-import com.example.test_spring.entity.Client;
-import com.example.test_spring.entity.Transaction;
+
+import com.example.testtask.entity.Currency;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +14,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.Before;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
+
+import com.example.testtask.entity.Transaction;
+import com.example.testtask.entity.Client;
 
 import java.util.List;
 
@@ -34,18 +37,18 @@ public class TransactionControllerTest {
 
             Client client1 = Client.builder().idClient(1L).firstName("Ivan").lastName("Ivanoff").middleName("Ivanoff")
                     .inn("1234567890").build();
-            Client client2 = Client.builder().idClient(2L).firstName("Ivan").lastName("Ivanoff").middleName("Ivanoff")
+            Client client2 = Client.builder().idClient(2L).firstName("Ivan").lastName("Petroff").middleName("Petroff")
                     .inn("1234567890").build();
-            Client client3 = Client.builder().idClient(3L).firstName("Ivan").lastName("Ivanoff").middleName("Ivanoff")
+            Client client3 = Client.builder().idClient(3L).firstName("Ivan").lastName("Sidoroff").middleName("Sidoroff")
                     .inn("1234567890").build();
 
-            this.c1 = Transaction.builder().id(1L).place("A PLACE 1").amount("10.01").currency("UAH")
+            this.c1 = Transaction.builder().id(1L).place("A PLACE 1").amount("10.01").currency(Currency.UAH)
                     .card("123456****1234").client(client1).build();
             this.c2 = Transaction.builder()
-                    .id(2L).place("A PLACE 2").amount("9876.01").currency("UAH")
+                    .id(2L).place("A PLACE 2").amount("9876.01").currency(Currency.UAH)
                     .card("123456****1234").client(client2).build();
             this.c3 = Transaction.builder()
-                    .id(3L).place("A PLACE 3").amount("12.01").currency("USD")
+                    .id(3L).place("A PLACE 3").amount("12.01").currency(Currency.USD)
                     .card("123456****1234").client(client3).build();
         }
 

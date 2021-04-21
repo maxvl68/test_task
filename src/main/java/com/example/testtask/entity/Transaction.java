@@ -1,4 +1,4 @@
-package com.example.test_spring.entity;
+package com.example.testtask.entity;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
@@ -16,25 +16,32 @@ import java.io.Serializable;
 @ToString
 
 @Entity
-@Table(name = "clients")
-@JacksonXmlRootElement(localName = "Client")
-public class Client implements Serializable {
-    private static final long serialVersionUID = 21L;
+@Table(name = "transactions")
+@JacksonXmlRootElement(localName = "Transaction")
+public class Transaction implements Serializable {
+    private static final long serialVersionUID = 22L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JacksonXmlProperty(isAttribute = true)
-    private Long idClient;
+    private Long id;
 
     @JacksonXmlProperty
-    private String firstName;
+    private String place;
+
+    // toDo joda-money or BigDecimal
+    @JacksonXmlProperty
+    private String amount;
 
     @JacksonXmlProperty
-    private String lastName;
+    @Enumerated(EnumType.STRING)
+    private Currency currency;
 
     @JacksonXmlProperty
-    private String middleName;
+    private String card;
 
+    @OneToOne
+    @JoinColumn(name = "id_client")
     @JacksonXmlProperty
-    private String inn;
+    private Client client;
 }

@@ -1,6 +1,6 @@
-package com.example.test_spring.repository;
+package com.example.testtask.repository;
 
-import com.example.test_spring.entity.Client;
+import com.example.testtask.entity.Client;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
