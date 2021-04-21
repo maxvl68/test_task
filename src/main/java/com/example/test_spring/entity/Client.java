@@ -24,7 +24,7 @@ public class Client implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JacksonXmlProperty(isAttribute = true)
-    private Long id;
+    private Long idClient;
 
     @JacksonXmlProperty
     private String firstName;

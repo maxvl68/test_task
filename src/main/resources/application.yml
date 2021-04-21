@@ -19,11 +19,10 @@ spring:
 
   jpa:
     show-sql: true
-    hibernate:
-      dll-auto: update
     properties:
       hibernate:
         dialect: org.hibernate.dialect.H2Dialect
+        ddl-auto: create-drop
 
 logging:
   level:

@@ -40,7 +40,7 @@ public class Transaction implements Serializable {
     private String card;
 
     @OneToOne
-    @JoinColumn(name = "GROUP_ID")
+    @JoinColumn(name = "ID")
     @JacksonXmlProperty
     private Client client;
 }
